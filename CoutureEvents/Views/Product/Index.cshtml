@@ -1,0 +1,25 @@
+﻿@model CoutureEvents.Models.ProductModel
+@{
+    
+}
+
+<h1>Couture Events Services</h1>
+
+<div class="whitebackground">
+    <h2>@Model.Name</h2>
+    <p>@Model.Description</p>
+    <h3>@Model.Price.Value.ToString("c")</h3>
+    </h3>
+
+    <h3>
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(m =>m.Description)
+            @Html.HiddenFor(m => m.Name)
+            @Html.HiddenFor(m => m.Price)
+            
+            <input type="submit" class="btn btn-primary" title="Add to Cart" />
+        }
+    </h3>
+</div>
+

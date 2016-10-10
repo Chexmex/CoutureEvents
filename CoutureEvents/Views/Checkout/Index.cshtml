@@ -1,0 +1,40 @@
+﻿@model CoutureEvents.Models.CheckoutModel
+@{
+    ViewBag.Title = "view";
+}
+
+
+@Html.ValidationSummary(false)
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+
+        <div class="form-group">
+         
+            @Html.LabelFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Phone)
+            @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Phone)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Address)
+            @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Address)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.CreditCard)
+            @Html.TextBoxFor(m => m.CreditCard, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.CreditCard)
+        </div>
+
+        <input type="submit" />
+    </fieldset>
+}

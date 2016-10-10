@@ -1,0 +1,133 @@
+﻿body {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    background-color: #6ADBFF;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.whitebackground{
+    background-color:white;
+    border:solid;
+    border-color:white;
+     border-radius:5px;
+     opacity: .8;
+}
+
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    background-color:white;
+    opacity: .8;
+}
+
+.navbar-inverse{
+    background-color:white;
+    border-color:white;
+    margin-left: 8%;
+    margin-right: 8%;
+    border-radius:5px;
+    padding-top: 10px;
+    opacity: .8;
+}
+
+
+.navbar-inverse .navbar-nav > li> a{
+    color:black;
+    background-color:white;
+    opacity: .8;
+}
+
+.navbar-inverse .navbar-nav > li> a:hover{
+    color:white;
+    background-color:  #6ADBFF;
+}
+
+.nav > li{
+    padding-right: 10px;
+}
+
+ul{
+    background-color:white;
+}
+
+.navbar-nav{
+    float: right;
+}
+
+.btn{
+    background: linear-gradient(#D2DBFF, #6adbff);
+    width: 15%;
+    height: 5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    text-align:center;
+}
+
+.carousel-control.right {
+    right: 21px;
+}
+
+ul.carousel-indicators{
+    background-color: transparent;
+}
+
+.carousel {
+    position: relative;
+    margin-top: 15px;
+    margin-left: 19px;
+}
+@font-face{
+    font-family:myFirstFont;
+    src: url("FuturaPTLight.otf");
+}
+
+
+.navfont{
+    font-family:myFirstFont;
+    font-size: 16px;
+}
+
+footer div{
+        display: inline-block;
+        padding-right: 10px;
+
+}
+
+footer{
+    text-align: center;
+    padding-top: 15px;
+}
+
+#submit{
+        margin-left: 39%;
+        background: linear-gradient(#D2DBFF, #6adbff);
+        width: 15%;
+        height: 5%;
+        text-align:center;
+}
+
+#services{
+    margin-top: 15px;
+
+}

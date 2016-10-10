@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CEdatabase", "CEdatabase\CEdatabase.sqlproj", "{FF46A1D3-2079-44B0-9007-38418C33284F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoutureEvents", "CoutureEvents\CoutureEvents.csproj", "{29A3CD0C-619B-4003-85F7-FAAFE289CF73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF46A1D3-2079-44B0-9007-38418C33284F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF46A1D3-2079-44B0-9007-38418C33284F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF46A1D3-2079-44B0-9007-38418C33284F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FF46A1D3-2079-44B0-9007-38418C33284F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF46A1D3-2079-44B0-9007-38418C33284F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF46A1D3-2079-44B0-9007-38418C33284F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{29A3CD0C-619B-4003-85F7-FAAFE289CF73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A3CD0C-619B-4003-85F7-FAAFE289CF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A3CD0C-619B-4003-85F7-FAAFE289CF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A3CD0C-619B-4003-85F7-FAAFE289CF73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

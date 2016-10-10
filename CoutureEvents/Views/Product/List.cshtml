@@ -1,0 +1,19 @@
+﻿@model List<CoutureEvents.Models.ProductModel>
+@{
+    ViewBag.Title = "List";
+}
+
+
+<body>
+   
+    @foreach (var items in Model)
+    {
+        <div id="services" class="whitebackground">
+            <h1>@items.Name</h1>
+            <h2>@items.Price.Value.ToString("c")</h2>
+            <p>@items.Description</p>
+            <button class="btn">Add to Proposal</button>
+        </div>
+
+    }
+</body>

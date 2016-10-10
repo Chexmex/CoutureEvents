@@ -1,0 +1,5 @@
+C:\Users\codingtemple\Documents\Visual Studio 2015\Projects\CoutureEvents\CEdatabase\bin\Debug\CEdatabase.dacpac
+C:\Users\codingtemple\Documents\Visual Studio 2015\Projects\CoutureEvents\CEdatabase\bin\Debug\CEdatabase.dll
+C:\Users\codingtemple\Documents\Visual Studio 2015\Projects\CoutureEvents\CEdatabase\bin\Debug\CEdatabase.pdb
+C:\Users\codingtemple\Documents\Visual Studio 2015\Projects\CoutureEvents\CEdatabase\obj\Debug\CEdatabase.dll
+C:\Users\codingtemple\Documents\Visual Studio 2015\Projects\CoutureEvents\CEdatabase\obj\Debug\CEdatabase.pdb
