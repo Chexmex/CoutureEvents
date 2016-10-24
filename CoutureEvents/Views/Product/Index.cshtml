@@ -1,6 +1,6 @@
 ﻿@model CoutureEvents.Models.ProductModel
 @{
-    
+    ViewBag.Title = Model.Name;
 }
 
 <h1>Couture Events Services</h1>
@@ -9,7 +9,7 @@
     <h2>@Model.Name</h2>
     <p>@Model.Description</p>
     <h3>@Model.Price.Value.ToString("c")</h3>
-    </h3>
+    
 
     <h3>
         @using (Html.BeginForm())
@@ -17,9 +17,19 @@
             @Html.HiddenFor(m =>m.Description)
             @Html.HiddenFor(m => m.Name)
             @Html.HiddenFor(m => m.Price)
+            @Html.HiddenFor(m => m.ServiceID)
             
-            <input type="submit" class="btn btn-primary" title="Add to Cart" />
-        }
+            if(User.Identity.IsAuthenticated)
+            {
+            <input type="submit" class="btn btn-primary" title="Add to Proposal" />
+            }
+            else
+            {
+                
+               @Html.ActionLink("Register", "Register", "Home", null, new { @class = "btn btn-primary" });
+                 
+            }
+    }
     </h3>
 </div>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title </title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -26,6 +26,22 @@
                     <li class="navfont">@Html.ActionLink("Gallery", "Gallery", "Home")</li>
                     <li class="navfont">@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li class="navfont">@Html.ActionLink("Register", "Register", "Home")</li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="navfont">@Html.ActionLink("Admin", "Index", "ProductAdmin")</li>
+                    }
+                    <p>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <span>Welcome @User.Identity.Name</span>
+                            <span>@Html.ActionLink("Log Out", "Logout", "Account")</span>
+                        }
+                        else
+                        {
+                            <span> @Html.ActionLink("Log in", "Login", "Account")</span>
+                        }
+                    </p>
+                    
                 </ul>
             </div>
         </div>

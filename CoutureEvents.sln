@@ -7,6 +7,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CEdatabase", "CEdatabase\CE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoutureEvents", "CoutureEvents\CoutureEvents.csproj", "{29A3CD0C-619B-4003-85F7-FAAFE289CF73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{901DEEA4-AFCA-4CC6-AC41-43DD6E94E8A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{29A3CD0C-619B-4003-85F7-FAAFE289CF73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29A3CD0C-619B-4003-85F7-FAAFE289CF73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29A3CD0C-619B-4003-85F7-FAAFE289CF73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{901DEEA4-AFCA-4CC6-AC41-43DD6E94E8A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{901DEEA4-AFCA-4CC6-AC41-43DD6E94E8A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{901DEEA4-AFCA-4CC6-AC41-43DD6E94E8A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{901DEEA4-AFCA-4CC6-AC41-43DD6E94E8A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

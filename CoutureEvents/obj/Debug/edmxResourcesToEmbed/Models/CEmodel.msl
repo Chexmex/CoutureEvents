@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CEdatabaseModelStoreContainer" CdmEntityContainer="CEdatabaseEntities1">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="CEdatabaseModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="NumberOfGroomsmen" ColumnName="NumberOfGroomsmen" />
+          <ScalarProperty Name="NumberOfBridesmaids" ColumnName="NumberOfBridesmaids" />
+          <ScalarProperty Name="NumberOfGuests" ColumnName="NumberOfGuests" />
+          <ScalarProperty Name="WeddingDate" ColumnName="WeddingDate" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="GroomLastName" ColumnName="GroomLastName" />
+          <ScalarProperty Name="GroomFirstName" ColumnName="GroomFirstName" />
+          <ScalarProperty Name="BrideLastName" ColumnName="BrideLastName" />
+          <ScalarProperty Name="BrideFirstName" ColumnName="BrideFirstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="CEdatabaseModel.Service">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Cart" TypeName="CEdatabaseModel.Cart" StoreEntitySet="Cart">
+      <EndProperty Name="Service">
+        <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+      </EndProperty>
+      <EndProperty Name="Customer">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

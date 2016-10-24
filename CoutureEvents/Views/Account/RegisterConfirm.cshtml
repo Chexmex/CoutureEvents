@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "RegisterConfirm";
+}
+
+@if (Viewbag.Confirmed)
+{
+
+    <div>
+        <h2>Your Email Address was confirmed!</h2>
+        @Html.ActionLink("Click here to log in", "Login", "Account")
+    </div>
+
+}
+else
+{
+    <div>
+        <h2>Error!</h2>
+        @Html.ActionLink("Click here to log in", "Login", "Account")
+    </div>
+}
+

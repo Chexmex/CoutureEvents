@@ -1,0 +1,46 @@
+﻿@model CoutureEvents.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div class="form-group">
+        @Html.LabelFor(m=> m.email)
+        @Html.TextBoxFor(m => m.email, new { @class = "Form-control" })
+        @Html.ValidationMessageFor(m=>m.email)
+        
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.password)
+        @Html.TextBoxFor(m => m.password, new { @class = "Form-control" })
+        @Html.ValidationMessageFor(m => m.password)
+       
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.phoneNumber)
+        @Html.TextBoxFor(m => m.phoneNumber, new { @class = "Form-control" })
+        @Html.ValidationMessageFor(m => m.phoneNumber)
+       
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "Form-control" })
+        @Html.ValidationMessageFor(m => m.FirstName)
+     
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName, new { @class = "Form-control" })
+        @Html.ValidationMessageFor(m => m.LastName)
+        <input type="submit" value="Create Account" class="btn btn-primary" />
+    </div>
+
+}
+}

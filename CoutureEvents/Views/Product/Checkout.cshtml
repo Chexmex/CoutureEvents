@@ -1,0 +1,138 @@
+﻿@model CoutureEvents.Models.ProposalModel
+@{
+    ViewBag.Title = "Proposal";
+}
+<div class="whitebackground">
+    <h2>Proposal</h2>
+    <div>
+        <p>@DateTime.Now.ToShortDateString()</p>
+
+        <p>
+        @Model.Customer.GroomFirstName & @Model.Customer.BrideFirstName
+            <br />
+        @Model.Customer.Address
+            <br />
+        @Model.Customer.City
+            <br />
+        @Model.Customer.PhoneNumber
+            <br />
+        @Model.Customer.Email
+        </p>
+    </div>
+
+    <div>
+
+        <p>Dear @Model.Customer.GroomFirstName & @Model.Customer.BrideLastName ,</p>
+        <p>
+            This letter follows your request for a Wedding Planner and my professional role in helping you plan it.
+            It is my understanding that, you will retain me as a Professional Wedding Consultant and Wedding Day Coordinator for your wedding on @Model.Customer.WeddingDate .
+        </p>
+        <h3>Description of Services</h3>
+
+        <p>As a consultant my role includes:</p>
+            <ul>
+                <li>Assistance in budget determination and breakdown as needed</li>
+                <li> Discussion of theme, color, style and complete wedding design</li>
+                <li>  Research of wedding professionals in each category that fit your event style and budget provided you with suggestions and guidance in making the final selections</li>
+                <li>  Professional in-person consultation time throughout the planning process</li>
+                <li>  Unlimited consultations with you via telephone/email</li>
+                <li>  All items included within the Partial Package</li>
+            </ul>
+
+           <p> As Wedding Day Coordinator my duties include:</p>
+            <ul>
+                <li> Visit to both ceremonies and reception sites prior to wedding</li>
+                <li>Development of a detailed wedding timeline and floor plan for contracted vendors and bridal party</li>
+                <li>Follow up telephone calls to all contracted vendors 1-2 weeks before the wedding day</li>
+                <li>Wedding Rehearsal supervision</li>
+                <li>On-site coordination and supervision at the ceremony site and reception for up to 12 hours on the day of the wedding</li>
+                <li> An additional event manager, on site, the day of the wedding</li>
+            </ul>
+        <p> As the client, you will rely on me to work as many hours as may be reasonably necessary to fulfill my obligations under this agreement.</p>
+
+
+        <h3>Conditions</h3>
+        <ul>
+            <li>I understand that my role will be that of advisor and coordinator.  You will make the actual selections of service providers and I will implement those selections.</li>
+            <li>You will make payments directly to the service providers/vendors and not to me.  If litigation occurs, it occurs in the jurisdiction where my office is located and the winning party will be reimbursed for attorney and legal fees and court costs.</li>
+            <li>It is your responsibility to provide me with contact names, telephone numbers and any scheduled timetables for all service providers involved in the wedding ceremony/reception no later than 14 days prior to the wedding or upon the signing of this letter.</li>
+            <li>It is also your responsibility to notify me of any changes in a timely manner.  I shall not be held liable for any changes made by you or your selected service providers.</li>
+            <li>I will use my professional judgment when taking action in regard to changes, weather, tardiness, non-performance, etc. based on the situation, time limitations and/or your wishes.</li>
+            <li>In the event a venue coordinator is on site I will work with you and the coordinator as needed.</li>
+            <li>The bridal couple gives permission and shall allow Couture Events to use any photography of them, the wedding ceremony/reception setting for viewing on our website for promotional purposes only.</li>
+        </ul>
+
+        <h3> Fees & Payment Schedule</h3>
+        <p>
+            Below is the proposal price for your Wedding Planning Package.  Please note that this number is an estimate and is sbuject to change based on
+            the need of each indvidual client.  A final price will be determined once a consultation with Suzanne has been completed
+        </p>
+        <p>
+            For my service you will pay me a total of
+            
+                @(Model.Service.Price.HasValue ? Model.Service.Price.Value.ToString("c") : "Not Available") .
+                Payment will be made as follows: A non-refundable retainer in the amount of
+            <ul> @{
+                decimal? a = Model.Service.Price;
+                decimal? b = a / 3;
+                }
+                <li> @(b.HasValue ? b.Value.ToString("c") : "NotAvaiable") upon signature of this letter of agreement</li>
+               <li> @(b.HasValue ? b.Value.ToString("c") : "NotAvaiable") due on @DateTime.Now.AddMonths(2).Date.ToShortDateString();
+                 This payment is non-refundable upon receipt.</li>
+               <li> @(b.HasValue ? b.Value.ToString("c") : "NotAvaiable") due (two weeks prior to your wedding date.)</li>
+            </ul>
+        </p>
+
+        <h3>Term/Termination</h3>
+        <p>This agreement will terminate automatically upon completion of the services required by this letter of agreement.</p>
+
+            <h3>Changes/Cancellations</h3>
+           <p> 
+               Any changes made to this letter of agreement must be made in writing and signed by all parties.  You may cancel this agreement, in writing, for any reason.  If the wedding is canceled, refunds are limited to unearned fees, funds in excess of unused or non-refundable fees and out-of-pocket expenses.  If you cancel less than 60 days before the wedding – except for the death of a member of your immediate family – there will be no refund.  If the wedding is not canceled, there will be no refund.
+          </p>
+        <h3> Acts of God</h3>
+        <p>
+            If an act of God, such as a fire, flood, earthquake or other natural calamity shall cause you to cancel your wedding; I will require payment only for the time actually spent planning your wedding.
+
+            If your understanding parallels mine, please sign on copy of this letter and return it to me along with your payment in the amount of $762.50 (please make check payable to Couture Events, Inc.)
+
+            I look forward to working with you to make your wedding the most enjoyable and memorable day of your life.
+        </p>
+        <p>
+            Sincerely,
+        </p>
+        <p>Suzanne Halaska</p>
+</div>
+
+    <div>
+        <p>
+            Once you have finalized everything on this page and submited we will review your information and reach out as quickly as possible to schedule a
+            consultation appointment. Looking forward to working with you!
+        </p>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(m => m.Customer.BrideFirstName)
+        @Html.HiddenFor(m => m.Customer.BrideLastName)
+        @Html.HiddenFor(m => m.Customer.GroomFirstName)
+        @Html.HiddenFor(m => m.Customer.GroomLastName)
+        @Html.HiddenFor(m => m.Customer.PhoneNumber)
+        @Html.HiddenFor(m => m.Customer.Email)
+        @Html.HiddenFor(m => m.Customer.NumberOfGuests)
+        @Html.HiddenFor(m => m.Customer.WeddingDate)
+        @Html.HiddenFor(m => m.Service.Name)
+
+        if (User.Identity.IsAuthenticated)
+        {
+            <input type="submit" class="btn btn-primary" title="Finish" />
+        }
+        else
+        {
+            @Html.ActionLink("Log in to add this your proposal", "Login", "Account");
+        }
+    }
+</div>
+
+
+

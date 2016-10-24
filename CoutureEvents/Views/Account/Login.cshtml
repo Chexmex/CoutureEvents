@@ -1,0 +1,31 @@
+﻿@model CoutureEvents.Models.CustomerModel
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm())
+{
+    <fieldset class="whitebackground">
+        <h2>Login</h2>
+
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email)
+            <br />
+            @Html.TextBoxFor(m => m.Email, new { @class = "Form-control" })
+            @Html.ValidationMessageFor(m => m.Email)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password)
+            <br />
+            @Html.TextBoxFor(m => m.Password, new { @class = "Form-control" })
+            @Html.ValidationMessageFor(m => m.Password)
+        </div>
+        <input type="submit" value="Login" class="btn btn-primary" />
+        <button class="btn btn-primary">@Html.ActionLink("Forgot Password", "ForgotPassword", "Account")</button>
+
+    </fieldset>
+    
+}

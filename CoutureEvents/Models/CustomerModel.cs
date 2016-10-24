@@ -16,10 +16,10 @@ namespace CoutureEvents.Models
         public string Email { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
-        public DateTime WeddingDate { get; set; }
-        public int NumberOfGuests { get; set;}
-        public int NumberOfBridesmaids { get; set; }
-        public int NumberOfGroomsmen { get; set; }
-
+        public DateTime? WeddingDate { get; set; }
+        public int? NumberOfGuests { get; set;}
+        public int? NumberOfBridesmaids { get; set; }
+        public int? NumberOfGroomsmen { get; set; }
+        public string Password { get; set; }
     }
 }
